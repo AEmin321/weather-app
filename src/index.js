@@ -14,7 +14,13 @@ searchInput.addEventListener('keypress',(e)=>{
 })
 
 searchButton.addEventListener('click',()=>{
-    domController(searchInput.value);
+    if (searchInput.checkValidity()) {
+        domController(searchInput.value);
+        errorP.textContent='';
+    }
+    else {
+        errorP.textContent=searchInput.validationMessage;
+    }
 })
 
 
