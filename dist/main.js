@@ -7,26 +7,100 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("async function getData () {\n    try {\n        // const fetchCurrentData=await fetch('http://api.weatherapi.com/v1/current.json?key=523aad0fd36442f98a4141313232903&q=paris',{mode:'cors'}); \n        // const currentData=await fetchCurrentData.json();\n        const fetchForeCastData=await fetch('http://api.weatherapi.com/v1/current.json?key=523aad0fd36442f98a4141313232903&q=paris',{mode:'cors'});\n        const foreCastData=await fetchForeCastData.json();\n        // console.log (currentData);\n        console.log (foreCastData);\n    }\n    catch(error) {\n        console.log (error);\n    }\n}\n\ngetData();\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_interface__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/interface */ \"./src/modules/interface.js\");\n\n\n_modules_interface__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/data.js":
+/*!*****************************!*\
+  !*** ./src/modules/data.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nasync function getData (city) {\n    try {\n        const endKey=`http://api.weatherapi.com/v1/current.json?key=523aad0fd36442f98a4141313232903&q=${city}`;\n        const fetchForeCastData=await fetch(endKey,{mode:'cors'});\n        if (!fetchForeCastData.ok){\n            throw new Error(`Sorry cant find ${city}.`);\n        }\n        const foreCastData=await fetchForeCastData.json();\n        console.log (foreCastData);\n        return foreCastData;\n    }\n    catch(error) {\n        alert(error);\n    }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://weather-app/./src/modules/data.js?");
+
+/***/ }),
+
+/***/ "./src/modules/interface.js":
+/*!**********************************!*\
+  !*** ./src/modules/interface.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data */ \"./src/modules/data.js\");\n\n\nconst domController=(()=>{\n    const currentCard=document.querySelector('.current-card');\n    // console.log(data);\n    async function defaultCurrentWeather (){\n        const data=await (0,_data__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('Konya');\n        currentCard.innerHTML=`<div class=\"temp\">${data.current.temp_c}&deg;</div>\n        <div class=\"weather-headings\">\n            <div class=\"weather-img\">\n                <img src=\"${data.current.condition.icon}\" alt=\"\">\n            </div>\n            <div class=\"weather-details\">\n                <div class=\"weather\">${data.current.condition.text}</div>\n                <div class=\"location\">${data.location.name}, ${data.location.country}</div>\n            </div>\n        </div>\n        <div class=\"last-updated\">${data.current.last_updated}</div>\n        <div class=\"current-details\">\n            <p><i class=\"fa-solid fa-temperature-three-quarters fa-lg\" style=\"color: #232931;\"></i>${data.current.feelslike_c}</p>\n            <p><i class=\"fa-solid fa-wind fa-lg\" style=\"color: #232931;\"></i>${data.current.wind_mph}</p>\n            <p><i class=\"fa-solid fa-water fa-lg\" style=\"color: #232931;\"></i>${data.current.humidity}</p>\n        </div>`;\n    }\n    defaultCurrentWeather();\n})()\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (domController);\n\n//# sourceURL=webpack://weather-app/./src/modules/interface.js?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.js"]();
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
 ;
