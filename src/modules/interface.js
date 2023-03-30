@@ -36,6 +36,7 @@ const domController=(()=>{
             daysWrapper.appendChild(Card);
         });
     }
+
     handleCurrentWeather();
     handleFutureWeather('asdf');
 })()

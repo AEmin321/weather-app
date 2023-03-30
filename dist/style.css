@@ -68,6 +68,17 @@ body {
     padding: 22px 0;
 }
 
+.search-icon {
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+footer {
+    flex: 1;
+    font-size: 0.8rem;
+    padding: 4px 0;
+}
+
 .search-wrapper input {
     outline: none;
     margin-bottom: 10px;
@@ -113,3 +124,26 @@ body {
     font-size: 0.9rem;
 }
 
+.load {
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid #4ECCA3;
+    border-top: 6px solid #232931;
+    border-radius: 100%;
+    margin: auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+
+.load.display {
+    visibility: visible;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
