@@ -11,18 +11,14 @@ body {
     flex-wrap: wrap;
 }
 
-.search-wrapper {
-    flex: 1;
-    background-color: #EEEEEE;
-}
-
+/* whater wrapper layout styles */
 .weather-wrapper {
     flex: 1;
     background-color: #4ECCA3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 .current-card {
@@ -72,4 +68,33 @@ body {
     padding: 0 6px;
 }
 
+/* //search input wrapper styles */
+.search-wrapper {
+    flex: 1;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-wrapper input {
+    outline: none;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid #4ECCA3;
+    background-color: #EEEEEE;
+    color: #232931;
+    font-size: 1.3rem;
+}
+
+.search-wrapper button {
+    border: none;
+    font-size: 1rem;
+    background-color: #4ECCA3;
+    color: #232931;
+    padding: 10px 55px;
+    /* width: 150px; */
+    cursor: pointer;
+}
 
