@@ -32,7 +32,7 @@ const domController=(()=>{
             Card.innerHTML=`<div class="weater-img"><img src="${day.day.condition.icon}" alt="weather image"></div>
             <div class="weather-temp">${day.day.avgtemp_c}&deg;</div>
             <div class="weather-title">${day.day.condition.text}</div>
-            <div class="weather-day">${day.date}</div>`;
+            <div class="weather-date">${day.date}</div>`;
             daysWrapper.appendChild(Card);
         });
     }
