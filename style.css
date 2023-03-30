@@ -13,12 +13,13 @@ body {
 
 /* whater wrapper layout styles */
 .weather-wrapper {
+    cursor: default;
     flex: 1;
     background-color: #4ECCA3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .current-card {
@@ -27,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 14px;
+    padding: 15px;
     border-radius: 10px 13px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     /* justify-content: start; */
@@ -96,5 +97,30 @@ body {
     padding: 10px 55px;
     /* width: 150px; */
     cursor: pointer;
+}
+
+/* days wrapper styles */
+.days-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.day-card {
+    background-color: #EEEEEE;
+    color: #232931;
+    margin: 3px;
+    padding: 17px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.weather-temp {
+    font-size: 2rem;
+}
+
+.weather-title {
+    font-weight: 300;
 }
 
