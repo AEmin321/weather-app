@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
     <title>Weather App</title>
 </head>
 <body>
+    <div class="weather-wrapper">
+        <div class="current-card">
+            <div class="temp">55&deg;</div>
+            <div class="weather-headings">
+                <div class="weather-img">
+                    <img src="./asset/weather/day/113.png" alt="">
+                </div>
+                <div class="weather-details">
+                    <div class="weather">sunny</div>
+                    <div class="location">kabul, Afghanistan</div>
+                </div>
+            </div>
+            <div class="current-details">
+                <p><i class="fa-solid fa-temperature-three-quarters fa-lg" style="color: #232931;"></i>asdf</p>
+                <p><i class="fa-solid fa-wind fa-lg" style="color: #232931;"></i>asdf</p>
+                <p><i class="fa-solid fa-water fa-lg" style="color: #232931;"></i>adf</p>
+            </div>
+        </div>
+    </div>
+    <div class="search-wrapper">
+        <input type="search" class="search-input" placeholder="Search for a city.">
+        <button>Enter</button>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>
