@@ -5,32 +5,25 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: space-around;
-    height: 100vh;
-    flex-wrap: wrap;
-}
-
-/* whater wrapper layout styles */
-.weather-wrapper {
+    /* height: 100vh; */
     cursor: default;
-    flex: 1;
-    background-color: #4ECCA3;
+    background-color: #EEEEEE;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
 
+/* whater wrapper layout styles */
 .current-card {
-    background-color: #EEEEEE;
+    flex: 1;
     color: #232931;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
     border-radius: 10px 13px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
     /* justify-content: start; */
 }
 
@@ -72,11 +65,7 @@ body {
 /* //search input wrapper styles */
 .search-wrapper {
     flex: 1;
-    background-color: #EEEEEE;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 22px 0;
 }
 
 .search-wrapper input {
@@ -89,27 +78,22 @@ body {
     font-size: 1.3rem;
 }
 
-.search-wrapper button {
-    border: none;
-    font-size: 1rem;
-    background-color: #4ECCA3;
-    color: #232931;
-    padding: 10px 55px;
-    /* width: 150px; */
-    cursor: pointer;
-}
-
 /* days wrapper styles */
 .days-wrapper {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    /* background-color: #4ECCA3; */
+    padding: 15px;
 }
 
 .day-card {
-    background-color: #EEEEEE;
-    color: #232931;
+    background-color: #4ECCA3;
+    width: 140px;
+    /* height: 160px; */
+    color: #EEEEEE;
     margin: 3px;
     padding: 17px;
     border-radius: 10px;
@@ -120,7 +104,12 @@ body {
     font-size: 2rem;
 }
 
+.weather-date {
+    font-weight: 400;
+}
+
 .weather-title {
-    font-weight: 300;
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
