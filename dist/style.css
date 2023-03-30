@@ -147,3 +147,10 @@ footer {
         transform: rotate(360deg);
     }
 }
+
+.error {
+    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+    color: #4ECCA3;
+}

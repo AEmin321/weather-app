@@ -1,19 +1,20 @@
 import domController from "./modules/interface";
 
-
+const searchInput = document.querySelector('.search-input');
 const searchButton = document.querySelector('.search-icon');
-const loader = document.querySelector('.load');
+const errorP = document.querySelector('.error');
 
-domController;
+window.onload=domController('konya');
+
+searchInput.addEventListener('keypress',(e)=>{
+    if (e.key==='Enter') {
+        e.preventDefault();
+        searchButton.click();
+    }
+})
+
+searchButton.addEventListener('click',()=>{
+    domController(searchInput.value);
+})
 
 
-function displayLoading () {
-    loader.classList.add('display');
-    setTimeout(()=>{
-        loader.classList.remove('display');
-    },4000);
-}
-
-function removeLoading () {
-    loader.classList.remove('display');
-}

@@ -1,11 +1,11 @@
 import getData from "./data";
 
-const domController=(()=>{
+const domController=(city)=>{
     const currentCard=document.querySelector('.current-card');
     const daysWrapper=document.querySelector('.days-wrapper');
 
     async function handleCurrentWeather (city){
-        const data1=await getData('Konya');
+        const data1=await getData(city);
         currentCard.innerHTML=`<div class="temp">${data1.current.temp_c}&deg;</div>
         <div class="weather-headings">
             <div class="weather-img">
@@ -25,7 +25,8 @@ const domController=(()=>{
     }
 
     async function handleFutureWeather(city) {
-        const data=await getData('konya');
+        daysWrapper.textContent='';
+        const data=await getData(city);
         data.forecast.forecastday.forEach(day => {
             const Card=document.createElement('div');
             Card.classList.add('day-card');
@@ -37,8 +38,8 @@ const domController=(()=>{
         });
     }
 
-    handleCurrentWeather();
-    handleFutureWeather('asdf');
-})()
+    handleCurrentWeather(city);
+    handleFutureWeather(city);
+}
 
 export default domController;
