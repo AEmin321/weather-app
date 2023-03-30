@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.search-wrapper {
+    flex: 1;
+    background-color: #EEEEEE;
+}
+
+.weather-wrapper {
+    flex: 1;
+    background-color: #4ECCA3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.current-card {
+    background-color: #EEEEEE;
+    color: #232931;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+    border-radius: 10px 13px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    /* justify-content: start; */
+}
+
+.weather-headings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-details {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.temp {
+    font-size: 8rem;
+}
+
+.weather {
+    font-weight: 400;
+}
+
+.current-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.current-details i {
+    margin-right: 6px;
+}
+
+.current-details>p {
+    padding: 0 6px;
+}
+
+

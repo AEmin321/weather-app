@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("async function getData () {\n    try {\n        const fetchData=await fetch('http://api.weatherapi.com/v1/current.json?key=523aad0fd36442f98a4141313232903&q=paris',{mode:'cors'}); \n        const dataSet=await fetchData.json();\n        console.log (dataSet);\n    }\n    catch(error) {\n        console.log (error);\n    }\n}\n\ngetData();\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("async function getData () {\n    try {\n        // const fetchCurrentData=await fetch('http://api.weatherapi.com/v1/current.json?key=523aad0fd36442f98a4141313232903&q=paris',{mode:'cors'}); \n        // const currentData=await fetchCurrentData.json();\n        const fetchForeCastData=await fetch('http://api.weatherapi.com/v1/current.json?key=523aad0fd36442f98a4141313232903&q=paris',{mode:'cors'});\n        const foreCastData=await fetchForeCastData.json();\n        // console.log (currentData);\n        console.log (foreCastData);\n    }\n    catch(error) {\n        console.log (error);\n    }\n}\n\ngetData();\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ })
 
