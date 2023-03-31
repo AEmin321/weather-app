@@ -4,7 +4,7 @@ const searchInput = document.querySelector('.search-input');
 const searchButton = document.querySelector('.search-icon');
 const errorP = document.querySelector('.error');
 
-window.onload=domController('konya');
+window.onload=domController('Konya');
 
 searchInput.addEventListener('keypress',(e)=>{
     if (e.key==='Enter') {
