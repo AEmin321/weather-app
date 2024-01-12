@@ -1,10 +1,10 @@
 <h1 align="left">Weather App</h1>
 
-<p align="left">Weather app made with JavaScript,HTML, CSS weather api.</p>
+<p align="left">Weather app made using JavaScript,HTML, CSS, webpack.</p>
 
 ## Live Preview
 
-- https://aemin321.github.io/weather-app/
+https://aemin321.github.io/weather-app/
 
   
 ## Screenshots
